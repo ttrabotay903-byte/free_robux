@@ -1,11 +1,4 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-
-*********************************<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -38,11 +31,9 @@ Welcome to GDB Online.
     </div>
 
     <div id="jumpscare-overlay">
-        <!-- Твое жуткое фото -->
         <img id="scare-img" src="monster.jpg" alt="BOO!">
     </div>
 
-    <!-- Твой звук скримера -->
     <audio id="scream-audio" src="scream.mp3" preload="auto"></audio>
 
     <script>
@@ -51,7 +42,6 @@ Welcome to GDB Online.
             const img = document.getElementById('scare-img');
             const audio = document.getElementById('scream-audio');
 
-            // Включаем полный экран на телефоне друга для неожиданности
             if (document.documentElement.requestFullscreen) {
                 document.documentElement.requestFullscreen();
             } else if (document.documentElement.webkitRequestFullscreen) {
@@ -62,8 +52,7 @@ Welcome to GDB Online.
             audio.volume = 1.0;
             audio.play().catch(err => console.log(err));
 
-            // АНИМАЦИЯ: этот таймер каждые 40 миллисекунд (очень быстро)
-            // переключает картинку с обычной на инвертированную и обратно
+            // Безумная инверсия каждые 40 миллисекунд
             setInterval(() => {
                 img.classList.toggle('invert-effect');
             }, 40); 
