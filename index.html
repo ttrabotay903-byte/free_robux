@@ -1,0 +1,73 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*********************************<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Free Robux Generator</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        body { background-color: #0d0d0d; color: #ffffff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; overflow: hidden; text-align: center; padding: 20px; }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; color: #32cd32; text-shadow: 0 0 10px rgba(50,205,50,0.4); }
+        p { font-size: 1.1rem; margin-bottom: 30px; color: #cccccc; }
+        .buttons-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 280px; }
+        button { width: 100%; padding: 16px 0; font-size: 1.2rem; font-weight: bold; border: none; border-radius: 12px; cursor: pointer; background: #32cd32; color: #fff; transition: transform 0.1s; }
+        button:active { transform: scale(0.95); }
+        #jumpscare-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #000; z-index: 9999; justify-content: center; align-items: center; }
+        #jumpscare-overlay img { width: 100%; height: 100%; object-fit: contain; }
+        
+        /* ЭФФЕКТ ИНВЕРСИИ ЦВЕТА (НЕГАТИВ) */
+        .invert-effect { filter: invert(100%); }
+    </style>
+</head>
+<body>
+
+    <div id="quiz-ui">
+        <h1>Free Robux 2026</h1>
+        <p>¿Quieres 10,000 Robux gratis en tu cuenta? 💎</p>
+        <div class="buttons-container">
+            <button onclick="startScreamer()">🕸 ¡Sí, conseguir!</button>
+            <button onclick="startScreamer()">🕸 Нет (No)</button>
+        </div>
+    </div>
+
+    <div id="jumpscare-overlay">
+        <!-- Твое жуткое фото -->
+        <img id="scare-img" src="monster.jpg" alt="BOO!">
+    </div>
+
+    <!-- Твой звук скримера -->
+    <audio id="scream-audio" src="scream.mp3" preload="auto"></audio>
+
+    <script>
+        function startScreamer() {
+            const overlay = document.getElementById('jumpscare-overlay');
+            const img = document.getElementById('scare-img');
+            const audio = document.getElementById('scream-audio');
+
+            // Включаем полный экран на телефоне друга для неожиданности
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen();
+            }
+
+            overlay.style.display = 'flex';
+            audio.volume = 1.0;
+            audio.play().catch(err => console.log(err));
+
+            // АНИМАЦИЯ: этот таймер каждые 40 миллисекунд (очень быстро)
+            // переключает картинку с обычной на инвертированную и обратно
+            setInterval(() => {
+                img.classList.toggle('invert-effect');
+            }, 40); 
+        }
+    </script>
+</body>
+</html>
